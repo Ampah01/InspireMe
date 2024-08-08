@@ -19,7 +19,7 @@
 }
 
 .main:before {
-  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  background-color: #0a0a23; 
   position: absolute;
   content: "";
   z-index: 2;
@@ -33,11 +33,7 @@
   z-index: 3;
   width: 100%;
   max-width: 640px;
-  background-image: radial-gradient(
-      at 27% 37%,
-      hsla(215, 98%, 61%, 1) 0px,
-      transparent 0%
-    ),
+  background-image: radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 1) 0px, transparent 0%),
     radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
     radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
     radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
@@ -66,31 +62,31 @@
 }
 
 .black_btn {
-  @apply rounded-full border border-gray-400 bg-slate-800 py-1.5 px-5 text-white transition-all hover:bg-white hover:text-slate-800 text-center text-sm font-inter flex items-center justify-center;
+  @apply rounded-full border border-slate-800 bg-slate-800 py-1.5 px-5 text-white transition-all  hover:text-slate-800 text-center text-sm font-inter flex items-center justify-center;
 }
 
 .outline_btn {
-  @apply rounded-full border border-gray-400 bg-transparent py-1.5 px-5 text-slate-800 transition-all hover:bg-slate-800 hover:text-white text-center text-sm font-inter flex items-center justify-center;
+  @apply rounded-full border border-slate-800 bg-transparent py-1.5 px-5 text-slate-100 transition-all hover:bg-slate-800 hover:text-slate-300 text-center text-sm font-inter flex items-center justify-center;
 }
 
 .head_text {
-  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-slate-900 sm:text-6xl;
+  @apply mt-5 font-extrabold leading-[1.15] text-slate-50;
 }
 
-.purple_gradient {
-  @apply bg-gradient-to-r from-[#4B0A50] via-[#6C1D75] to-[#A03F9D] bg-clip-text text-transparent;
+.cyan_gradient {
+  @apply bg-gradient-to-r from-[#50cfcf] via-[#6262ee] to-[#00FFFF] bg-clip-text text-transparent;
 }
 
 .green_gradient {
   @apply bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent;
 }
 
-.blue_gradient {
-  @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+.blue_gradient {  
+  @apply bg-gradient-to-r from-[#8B008B] to-[#9400D3] bg-clip-text text-transparent;
 }
 
 .desc {
-  @apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl;
+  @apply mt-5 text-lg text-gray-100 sm:text-xl max-w-2xl;
 }
 
 .search_input {
@@ -125,7 +121,7 @@
 
 /* Nav Component */
 .logo_text {
-  @apply max-sm:hidden font-satoshi font-semibold text-lg text-slate-900 tracking-wide;
+  @apply max-sm:hidden font-satoshi font-semibold text-lg text-slate-50 tracking-wide;
 }
 
 .dropdown {

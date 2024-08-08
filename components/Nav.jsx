@@ -24,7 +24,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="flex-between w-full mb-16 py-4 px-2">
+    <nav className="flex-between w-full mb-16 py-4 ">
       <Link href="/" className="flex gap-2 flex-center" aria-label="Home">
         <Image
           src="/assets/images/logo.svg"
@@ -40,7 +40,7 @@ const Nav = () => {
       <div className="sm:flex hidden">
         {session?.user ? (
           <div className="flex gap-3 md:gap-5">
-            <Link href="/create-prompt" className="black_btn" aria-label="Create Prompt">
+            <Link href="/create-prompt" className="outline_btn" aria-label="Create Prompt">
               Create Prompt
             </Link>
             <button

@@ -4,10 +4,10 @@ import Feed from "@components/Feed";
 
 const Home = () => {
   const prompts = [
-    "InspiredPrompts",
-    "IntelligentPrompts",
+    "InspirePrompt",
+    "UpliftPrompts",
     "SmartPrompts",
-    "VisionaryPrompts",
+    "Motivations",
   ];
   const [promptIndex, setPromptIndex] = useState(0);
   const [letterCharacter, setLetterCharacter] = useState(0);
@@ -26,11 +26,11 @@ const Home = () => {
   }, [letterCharacter, promptIndex, prompts]);
 
   return (
-    <section className="w-full flex-center flex-col">
+    <section className="w-full flex-center flex-col m-14">
       <h1 className="head_text text-center">
         Discover & Share
         <br className="" />
-        <span className="purple_gradient text-center dynamic-text">
+        <span className="cyan_gradient text-center dynamic-text">
           &nbsp;{prompts[promptIndex].slice(0, letterCharacter)}
         </span>
       </h1>
