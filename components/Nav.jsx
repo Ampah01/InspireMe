@@ -69,7 +69,7 @@ const Nav = () => {
                   type="button"
                   key={provider.name}
                   onClick={() => signIn(provider.id)}
-                  className="black_btn"
+                  className="outline_btn"
                   aria-label={`Sign in with ${provider.name}`}
                 >
                   Sign in
@@ -132,7 +132,7 @@ const Nav = () => {
                   type="button"
                   key={provider.name}
                   onClick={() => signIn(provider.id)}
-                  className="black_btn"
+                  className="outline_btn"
                   aria-label={`Sign in with ${provider.name}`}
                 >
                   Sign in
