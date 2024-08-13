@@ -1,11 +1,26 @@
-import React from 'react'
 
-const Profile = () => {
+import PromptCard from "@components/PromptCard"; 
+
+const Profile = ({name, desc, data, handleDelete, handleEdit}) => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <section className="w-full">
+      <h1 className="head_text text-left">
+        <span className="blue_gradient">{name} Profile</span>
+      </h1>
+      <p className="desc text-left">{desc}</p>
+
+      <div className="mt-10 flex flex-wrap justify-center md:justify-start gap-5 w-[400px]">
+        {data.map((post) => (
+          <PromptCard
+            key={post._id}
+            post={post}
+            handleEdit={() => handleEdit && handleEdit(post)}
+            handleDelete={() => handleDelete && handleDelete(post)}
+          />
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Profile;
