@@ -36,10 +36,11 @@ const handler = NextAuth({
         }
         return true;
       } catch (error) {
-        console.error("Error in signIn callback:", error.message);
+        console.error("Error in signIn callback:", error);
         return false;
       }
-    },
+    }
+    ,
   },
 });
 

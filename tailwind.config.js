@@ -13,6 +13,10 @@ module.exports = {
       },
       colors: {
         'primary-orange': '#FF5722',
+      },
+      screens: {
+        'mds': '853px', 
+        '2xl': '1240px', 
       }
     },
   },

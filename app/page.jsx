@@ -26,7 +26,7 @@ const Home = () => {
   }, [letterCharacter, promptIndex, prompts]);
 
   return (
-    <section className="w-full flex-center flex-col m-14">
+    <section className="w-full flex-center flex-col sm:px-16 px-6 ">
       <h1 className="head_text text-center">
         Discover & Share
         <br className="" />

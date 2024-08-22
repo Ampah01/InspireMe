@@ -24,8 +24,8 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="flex-between w-full mb-16 py-4 ">
-      <Link href="/" className="flex gap-2 flex-center" aria-label="Home">
+    <nav className="flex-between w-full mb-16 py-6 ">
+      <Link href="/" className="flex gap-2 flex-center max-sm:pl-4 pl-10" aria-label="Home">
         <Image
           src="/assets/images/logo.svg"
           alt="InspireMe logo"
@@ -37,7 +37,7 @@ const Nav = () => {
       </Link>
 
       {/* Desktop Navigation */}
-      <div className="sm:flex hidden">
+      <div className="sm:flex hidden pr-10">
         {session?.user ? (
           <div className="flex gap-3 md:gap-5">
             <Link href="/create-prompt" className="outline_btn" aria-label="Create Prompt">
@@ -80,7 +80,7 @@ const Nav = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <div className="sm:hidden flex relative z-50">
+      <div className="sm:hidden flex relative z-50 pr-4">
         {session?.user ? (
           <div className="flex">
             <Image
