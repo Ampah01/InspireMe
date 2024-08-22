@@ -19,21 +19,18 @@ const CreatePost = () => {
     try {
       const response = await fetch("/api/prompt/new", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
         body: JSON.stringify({
           prompt: post.prompt,
+          userId: session?.user.id,
           tag: post.tag,
-          userId: session?.user?.id, 
         }),
       });
 
       if (response.ok) {
-        router.push("/"); 
+        router.push("/");
       }
-    } catch (err) {
-      console.error("An error occurred:", err);
+    } catch (error) {
+      console.log(error);
     } finally {
       setSubmitting(false);
     }

@@ -44,7 +44,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     : "Date not available";
 
   return (
-    <div className="prompt_card  rounded-lg shadow-lg bg-slate-50 w-full">
+    <div className="prompt_card rounded-lg shadow-lg bg-slate-50 w-full">
       <div className="flex justify-between items-start gap-5">
         <div className="flex-1 flex items-center gap-3 cursor-pointer">
           {imageLoading && (
