@@ -17,7 +17,6 @@ const Feed = () => {
   const [search, setSearch] = useState("");
   const [posts, setPosts] = useState([]);
   const [searchedResults, setSearchedResults] = useState([]);
-
   const [searchTimeout, setSearchTimeout] = useState(null);
 
   useEffect(() => {
@@ -36,7 +35,7 @@ const Feed = () => {
 
     setSearchTimeout(
       setTimeout(() => {
-        const searchResult = filterPrompts(e.target.value);
+        const searchResult = filteredPosts(e.target.value);
         setSearchedResults(searchResult);
       }, 500)
     );
@@ -44,17 +43,17 @@ const Feed = () => {
 
   const handleTagClick = (tag) => {
     setSearch(tag);
-
-    const searchResult = filteredPosts(tagName);
+    const searchResult = filteredPosts(tag);
     setSearchedResults(searchResult);
   };
 
-  const filteredPosts = posts.filter(
-    (post) =>
-      post.prompt.toLowerCase().includes(search.toLowerCase()) ||
-      post.tag.toLowerCase().includes(search.toLowerCase()) ||
-      post.creator.username.toLowerCase().includes(search.toLowerCase())
-  );
+  const filteredPosts = (searchTerm) =>
+    posts.filter(
+      (post) =>
+        post.prompt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.tag.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.creator.username.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
   return (
     <section className="feed">
@@ -75,7 +74,7 @@ const Feed = () => {
           handleTagClick={handleTagClick}
         />
       ) : (
-        <PromptCardList data={filteredPosts} handleTagClick={handleTagClick} />
+        <PromptCardList data={posts} handleTagClick={handleTagClick} />
       )}
     </section>
   );
